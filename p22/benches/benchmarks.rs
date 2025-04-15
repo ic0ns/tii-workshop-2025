@@ -1,11 +1,41 @@
-use criterion::{Criterion, black_box, criterion_group, criterion_main};
-use p22::fibonacci_loop;
+#![feature(test)]
+use p22::calc::{fibonacci_loop, fibonacci_rec, celsius2fahrenheit, fahrenheit2celsius};
 
-fn bench_fibonacci_loop(c: &mut Criterion) {
-    c.bench_function("fibonacci_loop 20", |b| {
-        b.iter(|| fibonacci_loop(black_box(20)))
+extern crate test;
+use test::{Bencher, black_box};
+
+#[bench]
+fn bench_fibonacci_loop(b: &mut Bencher) {
+    b.iter(|| {
+        for i in 0..100 {
+            black_box(fibonacci_loop(i));
+        }
     });
 }
 
-criterion_group!(benches, bench_fibonacci_loop);
-criterion_main!(benches);
+#[bench]
+fn bench_fibonacci_rec(b: &mut Bencher) {
+    b.iter(|| {
+        for i in 0..10 {
+            black_box(p22::calc::fibonacci_rec(i));
+        }
+    });
+}
+
+#[bench]
+fn bench_celsius2fahrenheit(b: &mut Bencher) {
+    b.iter(|| {
+        for i in 0..10 {
+            black_box(p22::calc::celsius2fahrenheit(i));
+        }
+    });
+}
+
+#[bench]
+fn bench_fahrenheit2celsius(b: &mut Bencher) {
+    b.iter(|| {
+        for i in 0..10 {
+            black_box(p22::calc::fahrenheit2celsius(i));
+        }
+    });
+}

@@ -18,10 +18,10 @@ pub fn singer() {
         "eleven Pipers Piping",
         "twelve Drummers Drumming",
     ];
-    for i in 0..12 {
+    for (i, day) in days.iter().enumerate() {
         println!(
             "On the {} day of Christmas my true love sent to me:",
-            days[i]
+            day
         );
         for j in (0..=i).rev() {
             if i == 0 && j == 0 {

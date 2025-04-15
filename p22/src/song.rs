@@ -19,10 +19,7 @@ pub fn singer() {
         "twelve Drummers Drumming",
     ];
     for (i, day) in days.iter().enumerate() {
-        println!(
-            "On the {} day of Christmas my true love sent to me:",
-            day
-        );
+        println!("On the {} day of Christmas my true love sent to me:", day);
         for j in (0..=i).rev() {
             if i == 0 && j == 0 {
                 println!("{}.", gifts[j]);

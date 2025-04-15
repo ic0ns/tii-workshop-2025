@@ -1,6 +1,5 @@
 use p22::calc;
 
-
 #[test]
 fn test_functionality() {
     assert_eq!(calc::celsius2fahrenheit(0), 32);
@@ -20,5 +19,4 @@ fn test_functionality() {
     assert_eq!(calc::fibonacci_rec(6), 8);
     assert_eq!(calc::fibonacci_rec(7), 13);
     assert_eq!(calc::fibonacci_rec(8), 21);
-    
 }

@@ -5,17 +5,17 @@ pub mod calc {
     /// Returns the Fahrenheit equivalent of the given Celsius temperature.
     /// # Arguments
     /// * `celsius` - The temperature in Celsius.
-    /// 
+    ///
     /// # Returns
     /// * The temperature in Fahrenheit.
-    /// 
+    ///
     /// # Examples
-    /// 
+    ///
     /// ```
     /// use p22::calc::celsius2fahrenheit;
     /// let temp = celsius2fahrenheit(0);
     /// assert_eq!(temp, 32);
-    /// ``` 
+    /// ```
     pub fn celsius2fahrenheit(celsius: i32) -> i32 {
         let farenheit = (celsius * 9 / 5) + 32;
         farenheit
@@ -24,12 +24,12 @@ pub mod calc {
     /// Returns the Celsius equivalent of the given Fahrenheit temperature.
     /// # Arguments
     /// * `farenheit` - The temperature in Fahrenheit.
-    /// 
+    ///
     /// # Returns
     /// * The temperature in Celsius.
-    /// 
+    ///
     /// # Examples
-    /// 
+    ///
     /// ```
     /// use p22::calc::fahrenheit2celsius;
     /// let temp = fahrenheit2celsius(32);
@@ -46,9 +46,9 @@ pub mod calc {
     ///     
     /// # Returns
     /// * The nth Fibonacci number.
-    /// 
+    ///
     /// # Examples
-    /// 
+    ///
     /// ```
     /// use p22::calc::fibonacci_loop;
     /// let fib = fibonacci_loop(5);
@@ -68,10 +68,10 @@ pub mod calc {
     /// Returns the nth Fibonacci number using recursion.
     /// # Arguments
     /// * `n` - The position in the Fibonacci sequence.
-    /// 
+    ///
     /// # Returns
     /// * The nth Fibonacci number.
-    /// 
+    ///
     /// # Examples
     ///     
     /// ```

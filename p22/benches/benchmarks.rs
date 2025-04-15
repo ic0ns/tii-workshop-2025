@@ -1,4 +1,4 @@
-use criterion::{black_box, Criterion, criterion_group, criterion_main};
+use criterion::{Criterion, black_box, criterion_group, criterion_main};
 use my_crate::fibonacci_loop;
 
 fn bench_fibonacci_loop(c: &mut Criterion) {

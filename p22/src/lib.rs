@@ -17,7 +17,6 @@ pub mod calc {
     /// assert_eq!(temp, 32);
     /// ```
     pub fn celsius2fahrenheit(celsius: i32) -> i32 {
-        
         (celsius * 9 / 5) + 32
     }
 
@@ -36,7 +35,6 @@ pub mod calc {
     /// assert_eq!(temp, 0);
     /// ```
     pub fn fahrenheit2celsius(farenheit: i32) -> i32 {
-        
         (farenheit - 32) * 5 / 9
     }
 

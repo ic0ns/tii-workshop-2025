@@ -1,5 +1,5 @@
 use criterion::{Criterion, black_box, criterion_group, criterion_main};
-use my_crate::fibonacci_loop;
+use p22::fibonacci_loop;
 
 fn bench_fibonacci_loop(c: &mut Criterion) {
     c.bench_function("fibonacci_loop 20", |b| {

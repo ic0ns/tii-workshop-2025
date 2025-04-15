@@ -17,8 +17,8 @@ pub mod calc {
     /// assert_eq!(temp, 32);
     /// ```
     pub fn celsius2fahrenheit(celsius: i32) -> i32 {
-        let farenheit = (celsius * 9 / 5) + 32;
-        farenheit
+        
+        (celsius * 9 / 5) + 32
     }
 
     /// Returns the Celsius equivalent of the given Fahrenheit temperature.
@@ -36,8 +36,8 @@ pub mod calc {
     /// assert_eq!(temp, 0);
     /// ```
     pub fn fahrenheit2celsius(farenheit: i32) -> i32 {
-        let celsius = (farenheit - 32) * 5 / 9;
-        celsius
+        
+        (farenheit - 32) * 5 / 9
     }
 
     /// Returns the nth Fibonacci number using a loop.
@@ -60,7 +60,7 @@ pub mod calc {
         for _ in 0..n {
             let temp = a;
             a = b;
-            b = temp + b;
+            b += temp;
         }
         a
     }

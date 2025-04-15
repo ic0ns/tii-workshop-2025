@@ -1,5 +1,5 @@
 #![feature(test)]
-use p22::calc::{fibonacci_loop, fibonacci_rec, celsius2fahrenheit, fahrenheit2celsius};
+use p22::calc::{celsius2fahrenheit, fahrenheit2celsius, fibonacci_loop, fibonacci_rec};
 
 extern crate test;
 use test::{Bencher, black_box};

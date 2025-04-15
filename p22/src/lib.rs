@@ -1,5 +1,6 @@
-//Define a module calc
-
+//Define modules
+pub mod figures;
+pub mod tictac;
 pub mod calc {
 
     /// Returns the Fahrenheit equivalent of the given Celsius temperature.

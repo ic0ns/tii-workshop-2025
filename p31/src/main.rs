@@ -29,6 +29,7 @@ fn main() {
 
     // Accrue interest
     my_bank.accure_interest();
+    
 
     // Print the final state of the bank
     println!("Final state of the bank: {:?}", my_bank);
@@ -161,7 +162,7 @@ mod bank {
 
 #[cfg(test)]
 mod tests {
-    use super::bank;
+    
     use super::bank::User;
     use super::bank::Bank;
 

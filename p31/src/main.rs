@@ -1,7 +1,7 @@
-
+mod shapes2;
 fn main() {
     use bank::{User, Bank};
-
+    
     // Create a new bank
     let mut my_bank = Bank::new("MyBank".to_string(), 0.05, 0.1);
 
@@ -28,9 +28,8 @@ fn main() {
     }
 
     // Accrue interest
-    my_bank.accure_interest();
+    my_bank.accrue_interest();
     
-
     // Print the final state of the bank
     println!("Final state of the bank: {:?}", my_bank);
 }
@@ -67,11 +66,12 @@ mod bank {
             self.users.push(user);
         }
 
+        #[allow(dead_code)]
         pub fn get_user(&self, name: &str) -> Option<&User> {
             self.users.iter().find(|user| user.name == name)
-            
         }
 
+        #[allow(dead_code)]
         pub fn calc_balance(&self, user: &User) -> f64 {
             let mut balance = user.balance as f64;
             if user.credit_line > 0.0 {
@@ -122,7 +122,7 @@ mod bank {
             Ok(())
         }
 
-        pub fn accure_interest(&mut self) {
+        pub fn accrue_interest(&mut self) {
             for user in &mut self.users {
                 let mut balance = user.balance as f64;
                 if user.credit_line > 0.0 {
@@ -135,6 +135,7 @@ mod bank {
             }
         }
 
+        #[allow(dead_code)]
         pub fn merge_banks(&mut self, other: &Bank) {
             for user in &other.users {
                 if let Some(existing_user) = self.get_user_mut(&user.name) {
@@ -145,6 +146,7 @@ mod bank {
             }
         }
 
+        #[allow(dead_code)]
         pub fn get_user_mut(&mut self, name: &str) -> Option<&mut User> {
             self.users.iter_mut().find(|user| user.name == name)
         }
@@ -229,7 +231,7 @@ mod tests {
             balance: 500,
         };
         bank.add_user(user);
-        bank.accure_interest();
+        bank.accrue_interest();
         assert_eq!(
             bank.get_user("Alice").unwrap().balance,
             (500.0 + 1000.0 * 0.05) as i64
